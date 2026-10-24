@@ -1,0 +1,80 @@
+# ffee.me Link Submission Console
+
+> A local-first, bilingual web workspace for managing multi-project submission materials, filtering a 500+ platform directory by Dofollow / backlink / free-submission attributes, browsing promotion communities and search-engine submission tools, and tracking backlink progress. No account, no server, no upload — all state is stored in the browser.
+
+## Quick facts
+
+- Product: ffee.me 外链提交工作台 / ffee.me Link Submission Console
+- Type: single-file web application (HTML + CSS + vanilla JavaScript)
+- Languages: Simplified Chinese and English
+- Data storage: browser `localStorage` only
+- Platform directory: 500+ built-in submission platforms across 9 categories: AI directories, SaaS review sites, launch/startup platforms, developer tools, social/content sites, community promotion, business/PR channels, search engines, and other channels
+- Community promotion: 17 Reddit communities plus Designer News, Growth Hackers, and Lobsters
+- Search-engine submission: Google Search Console, Bing Webmaster Tools, Yandex Webmaster, Baidu Search Resource Platform, Naver Search Advisor, Seznam Webmaster, and IndexNow
+- Deduplication: platform entries are deduplicated by URL and by normalized name; the app also deduplicates imported data and merges the updated catalog into existing local data without duplicates
+- Default project: ffee.me — a minimalist, multilingual online toolbox with 1000+ free tools, local file processing, and custom tool links
+- Website: https://ffee.me/
+
+## What the app does
+
+1. Manage multiple projects side by side.
+   - Each project has a product name, website URL, one-line tagline, and detailed description.
+   - Projects can be added, removed, collapsed, and copied with one click.
+2. Prepare submission materials.
+   - Per-field copy buttons and a "copy all" action.
+   - Projects are independent, so several products can be submitted in the same session.
+3. Work through a platform directory.
+   - Search by platform name or URL.
+   - Filter by category and submission status (pending, submitted, approved, rejected).
+   - Filter by Dofollow, backlink requirement, and free-submission support.
+   - Mark attributes directly in the table with the D / B / F dots (gray = unknown, green = yes, red = no).
+4. Use promotion communities.
+   - 17 specific Reddit communities for launch feedback, SaaS, startups, indie hacking, AI tools, SEO, marketing, and small business.
+   - Additional tech/design/growth communities: Designer News, Growth Hackers, Lobsters.
+   - The generic "Reddit" entry is replaced by these specific communities; legacy Reddit notes/status are transferred to r/SideProject during migration.
+5. Submit to search engines.
+   - Dedicated "Search Engines" category with direct webmaster console links for Google, Bing, Yandex, Baidu, Naver, Seznam, and IndexNow.
+6. Track progress.
+   - Follow-up dates, per-platform notes, and live backlink URLs.
+   - Automatic overdue highlighting.
+   - Weekly, monthly, quarterly, and yearly backlink goals with a progress bar and coaching message.
+7. Own the data.
+   - Export a complete JSON backup (platforms, projects, goals, language).
+   - Import a backup or a legacy platform array; imports are deduplicated by URL and name.
+   - Old localStorage data is migrated automatically; the new catalog is merged into large existing lists without overwriting progress.
+   - Data never leaves the browser.
+
+## Data model
+
+- `platforms[]`: id, name, url, category, dofollow, backlink, free, status, followUp, notes, links[]
+- `projects[]`: id, name, url, tagline, desc, collapsed
+- `okr`: cycle (`week` / `month` / `quarter` / `year`), target
+- `links[]`: url, title, date
+
+## Categories
+
+- AI工具目录 / AI Directories
+- SaaS软件评测 / SaaS Reviews
+- 产品发布创业 / Launch & Startup
+- 开发者技术 / Developer Tools
+- 社交内容平台 / Social & Content
+- 社区推广 / Community Promotion
+- 商业企业PR / Business & PR
+- 搜索引擎 / Search Engines
+- 其他渠道 / Other Channels
+
+## Privacy
+
+- No login, account, analytics, or server upload.
+- Files and data stay in the browser.
+- The only external request is the optional ffee.me logo asset.
+
+## Keywords
+
+外链提交, 平台提交, 项目物料, Dofollow, 需要反链, 免费提交, 外链管理, 跟进日期, 目标进度, 社区推广, Reddit 社区, 搜索引擎提交, 网站收录, 数据导入导出, 本地存储, ffee.me, 1000+ free online tools, link submission console, backlink tracker, promotion communities, search engine submission, IndexNow, SEO tool directory, privacy-first.
+
+## Links
+
+- App entry: ./4.html
+- Website: https://ffee.me/
+- Structured data: WebApplication JSON-LD is embedded in the app head.
